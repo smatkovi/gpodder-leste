@@ -1,0 +1,6 @@
+[submodule "upstream/gpodder-sailfish"]
+	path = upstream/gpodder-sailfish
+	url = https://github.com/gpodder/gpodder-sailfish.git
+[submodule "upstream/gpodder-ui-qml"]
+	path = upstream/gpodder-ui-qml
+	url = https://github.com/gpodder/gpodder-ui-qml.git

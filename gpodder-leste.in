@@ -1,0 +1,8 @@
+#!/bin/sh
+# gPodder 4 with the touch QML UI on Maemo Leste
+for d in "${XDG_CONFIG_HOME:-$HOME/.config}" "${XDG_DATA_HOME:-$HOME/.local/share}" \
+	"${XDG_CACHE_HOME:-$HOME/.cache}"; do
+	mkdir -p "$d/gpodder"
+done
+export PYTHONPATH=@APP@/lib${PYTHONPATH:+:$PYTHONPATH}
+exec qmlscene @APP@/touch/gpodder.qml "$@"

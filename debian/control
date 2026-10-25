@@ -1,0 +1,22 @@
+Source: gpodder-leste
+Section: user/multimedia
+Priority: optional
+Maintainer: Sebastian Matkovich <sebastian.matkovich@gmail.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.6.2
+Homepage: https://github.com/smatkovi/gpodder-leste
+Vcs-Git: https://github.com/smatkovi/gpodder-leste.git
+
+Package: gpodder-leste
+Architecture: all
+Depends: ${misc:Depends}, python3, qmlscene, qml-module-io-thp-pyotherside,
+ qml-module-qtquick2, qml-module-qtquick-window2, qml-module-qtmultimedia,
+ qml-module-qtgraphicaleffects, libqt5multimedia5-plugins,
+ gstreamer1.0-plugins-good, gstreamer1.0-pulseaudio, fontconfig
+Recommends: python3-mygpoclient
+Description: Podcast client for Maemo Leste (gPodder 4)
+ The podcast client of Maemo 5, brought up to date for Maemo Leste: the
+ current gPodder 4 core (gpodder-core 4.17.2 with podcastparser and minidb,
+ as used by gPodder for Sailfish OS 4.18.1) with the touch QML UI of
+ gpodder-ui-qml, on PyOtherSide and Qt 5.
+XB-Maemo-Display-Name: gPodder
