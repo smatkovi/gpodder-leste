@@ -5,4 +5,9 @@ for d in "${XDG_CONFIG_HOME:-$HOME/.config}" "${XDG_DATA_HOME:-$HOME/.local/shar
 	mkdir -p "$d/gpodder"
 done
 export PYTHONPATH=@APP@/lib${PYTHONPATH:+:$PYTHONPATH}
+# its playback as music (PulseAudio's media.role, which streams take from
+# their client): the Pro1X's deep-buffer music sink takes such streams,
+# with fewer wake-ups than the default output (pro1x-maemo-leste's
+# pro1x-music-sink); QtMultimedia's player sets no role of its own
+export PULSE_PROP="media.role=music${PULSE_PROP:+ $PULSE_PROP}"
 exec qmlscene @APP@/touch/gpodder.qml "$@"

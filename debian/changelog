@@ -1,3 +1,13 @@
+gpodder-leste (4.17.2+leste2) unstable; urgency=medium
+
+  * Playback as music: the launcher sets PulseAudio's media.role=music
+    (PULSE_PROP), which the player's stream takes from its client, so that
+    a deep-buffer music sink (the F(x)tec Pro1X's pro1x-music-sink, by its
+    intended roles) plays podcasts with fewer wake-ups. QtMultimedia's
+    MediaPlayer set no role.
+
+ -- Sebastian Matkovich <sebastian.matkovich@gmail.com>  Sat, 31 Oct 2026 11:20:00 +0100
+
 gpodder-leste (4.17.2+leste1) unstable; urgency=medium
 
   * gPodder for Maemo Leste: gpodder-core 4.17.2, podcastparser and minidb
